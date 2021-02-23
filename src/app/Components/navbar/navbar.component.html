@@ -1,0 +1,18 @@
+<mat-toolbar class="navbar navbar-dark navbar_container" style="background-color: #333333;">
+    <div class="container_nav">
+        <div class="nav_items justify-content-center">
+            <button mat-icon-button class="nabvar-brand navbar-dark" id="button_nav" (click)="toggleSidebar_main()"><mat-icon>menu</mat-icon></button>                              
+            <span class="logo_machine">Machine</span>
+        </div>
+        <form class="nav_search" >
+            <input class="form-control rounded-pill" type="search" placeholder="Search" aria-label="Search">            
+        </form>        
+        <div class="nav_items">
+            <button id="button_nav" mat-icon-button><mat-icon>notifications</mat-icon></button>
+            <button id="button_nav" mat-icon-button><mat-icon>email</mat-icon></button>
+            <button id="button_nav" style="margin-right: 10px;" mat-icon-button><mat-icon>event_note</mat-icon></button>
+            <igx-avatar class="avatar_navbar" initials="JS" size="small"></igx-avatar>           
+        </div>
+    </div>
+    
+</mat-toolbar>

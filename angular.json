@@ -22,7 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -94,7 +96,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/hammerjs/hammer.min.js"
+            ]
           }
         },
         "lint": {
@@ -123,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "workind-machine"
+    }
+  },
+  "defaultProject": "workind-machine",
+  "cli": {
+    "analytics": "458af40b-7171-4b95-b1b5-e26c94216bdc"
+  }
 }

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'workind-machine';
+
+  sidenav_toggle = false;
+
+  sidenav_main_toggle(){
+    this.sidenav_toggle = !this.sidenav_toggle;
+  }
 }
