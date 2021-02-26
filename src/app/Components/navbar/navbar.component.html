@@ -12,12 +12,22 @@
         </div>
             
         <div class="nav_items">
+            <button type="button" class="btn btn-dark" onclick="cambiarModo()">Oscuro / Claro</button>
             <button id="button_nav" mat-icon-button><mat-icon >notifications</mat-icon></button>
             <button id="button_nav" mat-icon-button><mat-icon >email</mat-icon></button>
             <button id="button_nav" mat-icon-button><mat-icon >event_node</mat-icon></button>
-            <button id="button_nav" style="margin-right: 10px;" mat-icon-button><mat-icon>more_vert</mat-icon></button>
+            <button id="button_nav" style="margin-right: 10px;" mat-icon-button [matMenuTriggerFor]="menu_settings"><mat-icon>more_vert</mat-icon></button>
+            <mat-menu class="nav_menu" #menu_settings="matMenu">
+                <div id="button_options" mat-menu-item>Dark mode
+                    
+                </div>
+                <mat-divider></mat-divider>
+                <button id="button_options" routerLink="/User/Settings" mat-menu-item>Settings</button>
+            </mat-menu>
             <igx-avatar class="avatar_navbar" bgColor="yellow" initials="JR"></igx-avatar>           
         </div>
-    </div>
-    
+    </div>   
 </mat-toolbar>
+
+
+

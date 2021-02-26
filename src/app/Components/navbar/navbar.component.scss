@@ -21,7 +21,7 @@
 }
 
 .search_nav:hover{
-    background-color: #333333;
+    background-color: var(--bg-color);
 }
 
 .search_btn{
@@ -34,7 +34,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.4s;
-    color:#cccccc;
+    color:var(--primary-color);
     cursor: pointer;    
 }
 
@@ -45,7 +45,7 @@
     outline: none;
     float: left;
     padding: 0;
-    color: white;    
+    color: var(--primary-color);    
     font-family: 'Open sans', sans-serif;
     font-size: 16px;
     transition: 0.5s;
@@ -61,7 +61,7 @@
 
 .search_nav:hover > .search_btn {
     background:#296ceb;
-    color: white;
+    color:var(--primary-color);
 }
 
 .search_btn > mat-icon {
@@ -76,13 +76,22 @@
 #nav_icon{
     height: 40px;
     width: 40px;
-    color:#cccccc;
+    color:var(--bg-color);
 }
 
 #button_nav{
-    color:#cccccc;
+    color:var(--bg-color);
     height: 40px;
     width: 40px;
+}
+
+::ng-deep .nav_menu{
+    background:var(--bg-color) !important;
+}
+
+#button_options{
+    background-color: var(--bg-color);
+    color:var(--primary-color);
 }
 
 .avatar_navbar{

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { OverlayContainer } from '@angular/cdk/overlay';
+
 
 @Component({
   selector: 'app-root',
@@ -6,11 +8,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'workind-machine';
+  title = 'WorkInd Machine';
+
+  @HostBinding('class') componentCssClass: any;
 
   sidenav_toggle = false;
 
   sidenav_main_toggle(){
     this.sidenav_toggle = !this.sidenav_toggle;
   }
+
+  constructor(public overlayContainer: OverlayContainer){}
+    
+  public OnSetTheme (e:string){
+    this.overlayContainer.getContainerElement().classList.add(e);
+    this.componentCssClass = e;
+  }
+
+  
 }
