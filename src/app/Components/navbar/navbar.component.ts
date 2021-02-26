@@ -14,10 +14,23 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @Output() toggle: EventEmitter<null> = new EventEmitter();
+  darkTheme: boolean = false;
 
+  
+
+  @Output() toggle: EventEmitter<null> = new EventEmitter();
+  @Output() darkmode: EventEmitter<boolean> = new EventEmitter();
+  
   toggleSidebar_main(){
     this.toggle.emit();
   }
 
+  
+
+  darkMode(){
+  
+  }
+
+  
+ 
 }

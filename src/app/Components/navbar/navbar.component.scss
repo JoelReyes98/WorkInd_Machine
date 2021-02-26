@@ -1,6 +1,13 @@
+.container{
+    margin:0px;
+    border:0px;
+    padding:0px;
+    height: 50px;
+    
+}
 .navbar_container{
     height: 50px;
-    width: 100% ;
+    width: 100%;
 }
 
 .container_nav{
@@ -76,22 +83,12 @@
 #nav_icon{
     height: 40px;
     width: 40px;
-    color:var(--bg-color);
 }
 
 #button_nav{
-    color:var(--bg-color);
     height: 40px;
     width: 40px;
-}
-
-::ng-deep .nav_menu{
-    background:var(--bg-color) !important;
-}
-
-#button_options{
-    background-color: var(--bg-color);
-    color:var(--primary-color);
+    position:relative;
 }
 
 .avatar_navbar{

@@ -14,8 +14,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$workind-machine-primary: mat-palette($mat-indigo);
-$workind-machine-accent: mat-palette($mat-pink, A200, A100, A400);
+$workind-machine-primary: mat-palette($mat-blue,800);
+$workind-machine-accent: mat-palette($mat-gray, 100, 300, 500);
 
 // The warn palette is optional (defaults to red).
 $workind-machine-warn: mat-palette($mat-red);
@@ -34,11 +34,32 @@ $workind-machine-theme: mat-light-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($workind-machine-theme);
-
 /* You can add global styles to this file, and also import other style files */
 
+// Define an alternate dark theme.
+$workind-dark-primary: mat-palette($mat-blue,800);
+$workind-dark-accent:  mat-palette($mat-gray, 800, 600, 900);
+$workind-dark-warn:    mat-palette($mat-deep-orange);
+$workind-dark-theme:   mat-dark-theme((
+  color: (
+    primary: $workind-dark-primary,
+    accent: $workind-dark-accent,
+    warn: $workind-dark-warn,
+  )
+));
+
+// Include the dark color styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.unicorn-dark-theme` will be affected by this alternate dark theme instead of the default theme.
+.light-theme{
+    @include angular-material-theme($workind-machine-theme);
+}
+.dark-theme{
+    @include angular-material-color($workind-dark-theme);
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Open Sans', sans-serif; }
 
 @import "~igniteui-angular/lib/core/styles/themes/index";
 // Uncomment the following lines if you want to add a custom palette:

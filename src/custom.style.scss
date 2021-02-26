@@ -41,7 +41,7 @@ $machine-dark-theme:   mat-dark-theme((
     color:#222222;
 }
 
-.dark-theme {
+.dark-theme{
     @include angular-material-color($machine-dark-theme);
     background: #222222;
     color:#EEEEEE;

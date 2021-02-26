@@ -6,6 +6,7 @@ import { GeneralSettingsComponent } from './components/general-settings/general-
 
 const routes: Routes = [
   { path: '', component: DashboardComponent},
+  { path: 'Dashboards', component: DashboardComponent},
   { path: 'User/Settings', component: GeneralSettingsComponent}, 
   { path: '**', component: Error404Component}
 ];
