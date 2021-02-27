@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import { mainModule } from 'process';
+import { MatSlideToggleChange} from '@angular/material/slide-toggle';
+
 
 @Component({
   selector: 'app-navbar',
@@ -9,26 +10,24 @@ import { mainModule } from 'process';
 
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   darkTheme: boolean = false;
 
-  
+  constructor() { }
+
+  ngOnInit(){
+    this.darkTheme = localStorage.getItem('theme') === "Dark" ? true : false;   
+  }
 
   @Output() toggle: EventEmitter<null> = new EventEmitter();
-  @Output() darkmode: EventEmitter<boolean> = new EventEmitter();
+  @Output() toggleChange: EventEmitter<boolean> = new EventEmitter(this.darkTheme);
   
   toggleSidebar_main(){
     this.toggle.emit();
   }
 
-  
-
   darkMode(){
-  
+    localStorage.setItem('theme',this.darkTheme ? "Dark" : "Light")
+    this.toggleChange.emit();
   }
 
   

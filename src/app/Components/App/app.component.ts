@@ -1,5 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
-import { OverlayContainer } from '@angular/cdk/overlay';
+
 
 
 @Component({
@@ -10,20 +10,18 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 export class AppComponent {
   title = 'WorkInd Machine';
 
-  @HostBinding('class') componentCssClass: any;
-
   sidenav_toggle = false;
+  darkTheme = false;
 
   sidenav_main_toggle(){
     this.sidenav_toggle = !this.sidenav_toggle;
   }
 
-  constructor(public overlayContainer: OverlayContainer){}
-    
-  public OnSetTheme (e:string){
-    this.overlayContainer.getContainerElement().classList.add(e);
-    this.componentCssClass = e;
+  dark_theme(){
+    this.darkTheme = !this.darkTheme;
   }
 
-  
+  constructor(){}
+   
+ 
 }

@@ -1,4 +1,4 @@
-<div [ngClass]="{'dark-theme': darkTheme}">
+<div class="mat-app-background" [ngClass]="{'dark-theme': darkTheme}">
     <mat-toolbar class="navbar_container" color="accent">
         <div class="container_nav">
                 <div class="nav_items justify-content-center">
@@ -13,7 +13,7 @@
             </div>
                 
             <div class="nav_items">
-                <mat-slide-toggle [(ngModel)]="darkTheme" change="darkMode()" color="primary" labelPosition="before" style="margin-top: 10px;">
+                <mat-slide-toggle [(ngModel)]="darkTheme" (change)="darkMode()" color="primary" labelPosition="before" style="margin-top: 10px;">
                     <mat-icon style="margin-top: 5px;">nightlight</mat-icon>
                 </mat-slide-toggle>
                 <button id="button_nav" mat-icon-button><mat-icon >notifications</mat-icon></button>

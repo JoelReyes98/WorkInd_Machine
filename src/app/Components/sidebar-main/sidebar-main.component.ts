@@ -7,13 +7,17 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SidebarMainComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() { 
   }
 
-  @Input() toggle_sidenav: boolean;
+  dark_theme_mode: boolean = false;
 
+  ngOnInit(){
+  }
+  
+  @Input('dark_theme_mode') dark_mode: boolean;
+  @Input() toggle_sidenav: boolean;
+  
   showFiller = false;
 
 }
