@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import { MatSlideToggleChange} from '@angular/material/slide-toggle';
+import { MatSlideToggleChange, MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { changei18n } from 'igniteui-angular';
 
 
 @Component({
@@ -15,21 +16,17 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(){
-    this.darkTheme = localStorage.getItem('theme') === "Dark" ? true : false;   
   }
 
   @Output() toggle: EventEmitter<null> = new EventEmitter();
-  @Output() toggleChange: EventEmitter<boolean> = new EventEmitter(this.darkTheme);
-  
+  @Output() readonly darkModeSwitch = new EventEmitter<boolean>();
+
   toggleSidebar_main(){
     this.toggle.emit();
   }
-
-  darkMode(){
-    localStorage.setItem('theme',this.darkTheme ? "Dark" : "Light")
-    this.toggleChange.emit();
-  }
-
   
+  onDarkTheme({ checked }: MatSlideToggleChange){
+    this.darkModeSwitch.emit(checked);
+  }
  
 }

@@ -10,12 +10,9 @@ export class SidebarMainComponent implements OnInit {
   constructor() { 
   }
 
-  dark_theme_mode: boolean = false;
-
   ngOnInit(){
   }
   
-  @Input('dark_theme_mode') dark_mode: boolean;
   @Input() toggle_sidenav: boolean;
   
   showFiller = false;

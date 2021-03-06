@@ -1,0 +1,72 @@
+<div class="Container" [ngClass]="{'sign-up-mode': sign_up_mode}">
+    <div class="forms-container">
+        <div class="signin-signup">
+            <form action="" class="sign-in-form">
+                <span class="tittle">Sign In</span>
+                <div class="input-field">
+                    <mat-icon class="icon">person</mat-icon>
+                    <input type="text" placeholder="User or Work Email">
+                </div>
+                <div class="input-field">
+                    <mat-icon class="icon">vpn_key</mat-icon>
+                    <input type="password" placeholder="Password">
+                </div>
+                <button mat-button class="btn-log"> Sign In </button>
+            </form>
+            <form action="" class="sign-up-form">
+                <span class="tittle">Sign Up</span>
+                <div class="input-field">
+                    <mat-icon class="icon">email</mat-icon>
+                    <input type="text" placeholder="Work Email">
+                </div>
+                <div class="input-field">
+                    <mat-icon class="icon">vpn_key</mat-icon>
+                    <input type="password" placeholder="Password">
+                </div>
+                <span class="inf-text"> Personal Information </span>
+                <div class="input-field">
+                    <mat-icon class="icon">person</mat-icon>
+                    <input type="text" placeholder="Full name">
+                </div>
+                <div class="input-field">
+                    <mat-icon class="icon">phone</mat-icon>
+                    <input type="text" placeholder="Mobile phone">
+                </div>
+                <div class="input-field">
+                    <mat-icon class="icon">business</mat-icon>
+                    <input type="text" placeholder="Company">
+                </div>
+                <div class="input-field">
+                    <mat-icon class="icon">engineering</mat-icon>
+                    <input type="text" placeholder="Work tittle">
+                </div>
+
+                <button mat-button class="btn-log"> Sign Up </button>
+            </form>
+        </div>          
+    </div>
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>New here?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil magnam 
+                aliquam minima repudiandae quidem delectus doloremque?
+                </p>
+                <button mat-button class="btn-transparent" (click)="sign_up()"> Sign Up </button>                
+            </div>
+            <img src="assets/media/sig in.svg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+            <div class="content">
+                <h3>One of us?</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil magnam 
+                aliquam minima repudiandae quidem delectus doloremque? 
+                </p>
+                <button mat-button class="btn-transparent" (click)="sign_in()"> Sign In </button>                
+            </div>
+            <img src="assets/media/sig up.svg" class="image" alt="" />      
+        </div>
+    </div>
+</div>
+
+

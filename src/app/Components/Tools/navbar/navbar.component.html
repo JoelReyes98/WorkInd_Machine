@@ -1,9 +1,9 @@
-<div class="mat-app-background" [ngClass]="{'dark-theme': darkTheme}">
+<div class="mat-app-background" >
     <mat-toolbar class="navbar_container" color="accent">
         <div class="container_nav">
                 <div class="nav_items justify-content-center">
                 <button mat-icon-button id="button_nav" (click)="toggleSidebar_main()"><mat-icon>menu</mat-icon></button>                              
-                <span class="logo_machine">Machine</span>
+                <span class="logo_machine" routerLink="dashboard">Machine</span>
                 <form class="nav_items search_nav">
                     <input class="search_txt" type="search" placeholder="Search" aria-label="Search">
                     <span class="search_btn">
@@ -13,7 +13,7 @@
             </div>
                 
             <div class="nav_items">
-                <mat-slide-toggle [(ngModel)]="darkTheme" (change)="darkMode()" color="primary" labelPosition="before" style="margin-top: 10px;">
+                <mat-slide-toggle (change)="onDarkTheme($event)" color="primary" labelPosition="before" style="margin-top: 10px;">
                     <mat-icon style="margin-top: 5px;">nightlight</mat-icon>
                 </mat-slide-toggle>
                 <button id="button_nav" mat-icon-button><mat-icon >notifications</mat-icon></button>
@@ -25,7 +25,7 @@
                         
                     </div>
                     <mat-divider></mat-divider>
-                    <button id="button_options" routerLink="/User/Settings" mat-menu-item>Settings</button>
+                    <button id="button_options" routerLink="Settings" mat-menu-item>Settings</button>
                 </mat-menu>
                 <igx-avatar class="avatar_navbar" bgColor="yellow" initials="JR"></igx-avatar>           
             </div>
