@@ -1,0 +1,36 @@
+<div class="mat-app-background" >
+    <mat-toolbar class="navbar_container" color="accent">
+        <div class="container_nav">
+                <div class="nav_items justify-content-center">
+                <button mat-icon-button id="button_nav" (click)="toggleSidebar_main()"><mat-icon>menu</mat-icon></button>                              
+                <span class="logo_machine" routerLink="dashboard">Machine</span>
+                <form class="nav_items search_nav">
+                    <input class="search_txt" type="search" placeholder="Search" aria-label="Search">
+                    <span class="search_btn">
+                        <mat-icon>search</mat-icon>
+                    </span>            
+                </form> 
+            </div>
+                
+            <div class="nav_items">
+                <mat-slide-toggle (change)="onDarkTheme($event)" color="primary" labelPosition="before" style="margin-top: 10px;">
+                    <mat-icon style="margin-top: 5px;">nightlight</mat-icon>
+                </mat-slide-toggle>
+                <button id="button_nav" mat-icon-button><mat-icon >notifications</mat-icon></button>
+                <button id="button_nav" mat-icon-button><mat-icon >email</mat-icon></button>
+                <button id="button_nav" mat-icon-button><mat-icon >event_node</mat-icon></button>
+                <button id="button_nav" style="margin-right: 10px;" mat-icon-button [matMenuTriggerFor]="menu_settings"><mat-icon>more_vert</mat-icon></button>
+                <mat-menu class="nav_menu" #menu_settings="matMenu" color="accent">
+                    <div id="button_options" mat-menu-item>Dark mode
+                        
+                    </div>
+                    <mat-divider></mat-divider>
+                    <button id="button_options" routerLink="Settings" mat-menu-item>Settings</button>
+                </mat-menu>
+                <igx-avatar class="avatar_navbar" bgColor="yellow" initials="JR"></igx-avatar>           
+            </div>
+        </div>   
+    </mat-toolbar>
+</div>
+
+
